@@ -24,7 +24,7 @@ const HomePage = () => {
                   Illum, quod.
                 </Typography>
                 <Link to="/login" style={{ textDecoration: 'none' }}>
-                  <Button variant="contained" color="secondary">
+                  <Button variant="contained" size="large">
                     Log In
                   </Button>
                 </Link>

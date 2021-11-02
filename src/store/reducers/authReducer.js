@@ -1,5 +1,5 @@
 const defaultState = {
-  isAuth: true,
+  isAuth: false,
 };
 
 const SET_IS_AUTH = 'SET_IS_AUTH';

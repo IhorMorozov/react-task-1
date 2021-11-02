@@ -1,14 +1,18 @@
 import React from 'react';
 import { AppBar, Box, Button, Container, Toolbar } from '@mui/material';
-import { makeStyles } from '@mui/styles';
 import { privateRoutes } from '../../router/routes';
 import { NavLink } from 'react-router-dom';
-import styles from './Navbar.module.scss';
-import { purple } from '@mui/material/colors';
+import { makeStyles } from '@mui/styles';
+const useStyle = makeStyles((theme) => ({
+  navLink: {
+    textDecoration: 'none',
+  },
+}));
 
 const Navbar = () => {
+  const classes = useStyle();
   return (
-    <AppBar position="fixed">
+    <AppBar position="fixed" style={{ backgroundColor: 'black' }}>
       <Container fixed>
         <Toolbar>
           {privateRoutes.map((route) => (
@@ -16,9 +20,9 @@ const Navbar = () => {
               <NavLink
                 to={route.path}
                 key={route.path}
-                className={styles.navLink}
+                className={classes.navLink}
               >
-                <Button variant="contained" color="secondary">
+                <Button variant="contained" size="small">
                   {route.link}
                 </Button>
               </NavLink>
