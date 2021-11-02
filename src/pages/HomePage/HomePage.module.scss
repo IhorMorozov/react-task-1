@@ -1,0 +1,20 @@
+.paper {
+  position: relative;
+  background-image: url('../../assets/images/home-bg.jpg');
+  //margin-bottom: 2rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  height: 100vh;
+  color: white;
+}
+.button {
+  background-color: rebeccapurple;
+}

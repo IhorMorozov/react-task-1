@@ -4,11 +4,9 @@ import { makeStyles } from '@mui/styles';
 import { privateRoutes } from '../../router/routes';
 import { NavLink } from 'react-router-dom';
 import styles from './Navbar.module.scss';
-
-const useStyles = makeStyles((theme) => {});
+import { purple } from '@mui/material/colors';
 
 const Navbar = () => {
-  const classes = useStyles();
   return (
     <AppBar position="fixed">
       <Container fixed>
@@ -20,7 +18,7 @@ const Navbar = () => {
                 key={route.path}
                 className={styles.navLink}
               >
-                <Button color="success" variant="contained">
+                <Button variant="contained" color="secondary">
                   {route.link}
                 </Button>
               </NavLink>

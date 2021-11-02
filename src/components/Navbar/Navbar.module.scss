@@ -1,21 +1,9 @@
-//@import '../../styles/constants';
-//.navbarItem {
-//  margin: 0 6px;
-//  padding: 8px 12px;
-//  font-size: 1.3rem;
-//  text-decoration: none;
-//  color: black;
-//  font-weight: 700;
-//  &:hover {
-//    color: white;
-//  }
-//}
-//.navbarItemActive {
-//  color: white;
-//  border-radius: 12px;
-//  background-color: black;
-//}
-
 .navLink {
   text-decoration: none;
+}
+.appBar {
+  background-color: rgb(41, 41, 41);
+}
+.button {
+  background-color: green;
 }
