@@ -1,5 +1,5 @@
 const defaultState = {
-  isAuth: false,
+  isAuth: localStorage.getItem('isAuth') || false,
 };
 
 const SET_IS_AUTH = 'SET_IS_AUTH';

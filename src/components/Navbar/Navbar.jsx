@@ -16,12 +16,8 @@ const Navbar = () => {
       <Container fixed>
         <Toolbar>
           {privateRoutes.map((route) => (
-            <Box mr={3}>
-              <NavLink
-                to={route.path}
-                key={route.path}
-                className={classes.navLink}
-              >
+            <Box mr={3} key={route.path}>
+              <NavLink to={route.path} className={classes.navLink}>
                 <Button variant="contained" size="small">
                   {route.link}
                 </Button>

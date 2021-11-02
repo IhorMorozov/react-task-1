@@ -20,8 +20,7 @@ const HomePage = () => {
                   React App
                 </Typography>
                 <Typography variant="h5" paragraph>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Illum, quod.
+                  Hello, User!
                 </Typography>
                 <Link to="/login" style={{ textDecoration: 'none' }}>
                   <Button variant="contained" size="large">
