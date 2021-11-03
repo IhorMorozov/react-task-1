@@ -1,9 +1,12 @@
 import React from 'react';
-import { AppBar, Box, Button, Container, Toolbar } from '@mui/material';
-import { privateRoutes } from '../../router/routes';
+import {
+  AppBar, Box, Button, Container, Toolbar,
+} from '@mui/material';
 import { NavLink } from 'react-router-dom';
 import { makeStyles } from '@mui/styles';
-const useStyle = makeStyles((theme) => ({
+import { privateRoutes } from '../../router/routes';
+
+const useStyle = makeStyles(() => ({
   navLink: {
     textDecoration: 'none',
   },

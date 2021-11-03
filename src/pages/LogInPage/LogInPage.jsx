@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Button, Container, Paper, TextField, Typography } from '@mui/material';
+import {
+  Button, Container, Paper, TextField, Typography,
+} from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import { useDispatch } from 'react-redux';
 import { setIsAuthAction } from '../../store/reducers/authReducer';
@@ -20,10 +22,10 @@ const LogInPage = () => {
     if (user.login === 'admin' && user.password === 'pass12345') {
       dispatch(setIsAuthAction(true));
       localStorage.setItem('isAuth', 'true');
-      localStorage.removeItem('isItFirstLoading');
     } else {
       dispatch(setIsAuthAction(false));
       localStorage.setItem('isAuth', '');
+      // eslint-disable-next-line no-alert
       alert('Username or password entered incorrectly.');
     }
   };
@@ -50,13 +52,11 @@ const LogInPage = () => {
           type="pas"
           fullWidth
           value={user.password}
-          onChange={(event) =>
-            setUser({ ...user, password: event.target.value })
-          }
+          onChange={(event) => setUser({ ...user, password: event.target.value })}
         />
         <Button
           variant="contained"
-          size={'large'}
+          size="large"
           style={{ marginTop: '2rem' }}
           onClick={() => logInHandler()}
         >
