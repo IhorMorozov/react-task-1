@@ -1,0 +1,23 @@
+{
+  "name": "react-task-1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Ihor Morozov",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.13.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.12",
+    "nodemon": "^2.0.14"
+  },
+  "devDependencies": {
+    "eslint": "^8.2.0",
+    "eslint-plugin-import": "^2.25.2"
+  }
+}
