@@ -1,0 +1,37 @@
+table {
+  width: 100%;
+  margin-top: 2rem;
+  border-spacing: 0;
+  border: 2px solid white;
+
+  tr {
+    &:hover {
+      background-color: #adadad;
+    }
+    :last-child {
+      td {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  th,
+  td {
+    margin: 0;
+    padding: 0.5rem;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    text-align: center;
+
+    :last-child {
+      border-right: 0;
+    }
+  }
+  th {
+    background-color: #1976D2;
+    color: white;
+  }
+  td:hover {
+    background-color: #adadad;
+  }
+}

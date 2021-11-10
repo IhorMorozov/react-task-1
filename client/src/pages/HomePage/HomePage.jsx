@@ -18,7 +18,7 @@ const HomePage = () => (
                 color="inherit"
                 gutterBottom
               >
-                React App
+                MERN App
               </Typography>
               <Typography variant="h5" paragraph>
                 Hello, User!
