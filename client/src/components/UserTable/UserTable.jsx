@@ -1,10 +1,10 @@
 import React from 'react';
 import './UserTable.module.scss';
+import PropTypes from 'prop-types';
 import UserItem from '../UserItem/UserItem';
 
 const UserTable = (props) => {
   const {
-    // eslint-disable-next-line react/prop-types
     users, dispatch, handleOpenModal, setOpenSnackbar,
   } = props;
 
@@ -17,8 +17,7 @@ const UserTable = (props) => {
         </tr>
       </thead>
       <tbody>
-        {/* eslint-disable-next-line react/prop-types */}
-        {users.map((user) => (
+        {users.length ? users.map((user) => (
           <UserItem
             user={user}
             key={user.email}
@@ -26,10 +25,17 @@ const UserTable = (props) => {
             handleOpenModal={handleOpenModal}
             setOpenSnackbar={setOpenSnackbar}
           />
-        ))}
+        )) : <h4 style={{ padding: '1rem' }}>No available users...</h4>}
       </tbody>
     </table>
   );
+};
+
+UserTable.propTypes = {
+  users: PropTypes.instanceOf(Array).isRequired,
+  dispatch: PropTypes.func.isRequired,
+  handleOpenModal: PropTypes.func.isRequired,
+  setOpenSnackbar: PropTypes.func.isRequired,
 };
 
 export default UserTable;

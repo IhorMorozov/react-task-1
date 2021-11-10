@@ -6,7 +6,7 @@ table {
 
   tr {
     &:hover {
-      background-color: #adadad;
+      background-color: rgba(224, 224, 224, 0.82);
     }
     :last-child {
       td {
@@ -32,6 +32,7 @@ table {
     color: white;
   }
   td:hover {
-    background-color: #adadad;
+    background-color: #1976D2;
+    color: white;
   }
 }

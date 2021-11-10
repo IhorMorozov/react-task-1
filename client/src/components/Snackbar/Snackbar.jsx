@@ -1,10 +1,9 @@
 import React from 'react';
 import { Snackbar } from '@mui/material';
+import PropTypes from 'prop-types';
 
 const CustomSnackbar = (props) => {
-  // eslint-disable-next-line react/prop-types
   const { open, setOpen, action } = props;
-  // eslint-disable-next-line react/prop-types
   const message = `User was successfully ${action.toLowerCase()}d`;
   return (
     <div>
@@ -16,6 +15,12 @@ const CustomSnackbar = (props) => {
       />
     </div>
   );
+};
+
+CustomSnackbar.propTypes = {
+  open: PropTypes.bool.isRequired,
+  setOpen: PropTypes.func.isRequired,
+  action: PropTypes.string.isRequired,
 };
 
 export default CustomSnackbar;

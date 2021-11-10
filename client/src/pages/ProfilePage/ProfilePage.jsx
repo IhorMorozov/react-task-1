@@ -1,23 +1,13 @@
 import React from 'react';
-import { Container, Paper, Typography } from '@mui/material';
-import { makeStyles } from '@mui/styles';
+import { Container, Typography } from '@mui/material';
+import Layout from '../../components/Layout/Layout';
 
-const useStyle = makeStyles(() => ({
-  wrapper: {
-    marginTop: '15rem',
-    padding: '5rem',
-  },
-}));
-
-const ProfilePage = () => {
-  const classes = useStyle();
-  return (
-    <Container>
-      <Paper elevation={24} className={classes.wrapper}>
-        <Typography variant="h1">This is Profile Page</Typography>
-      </Paper>
-    </Container>
-  );
-};
+const ProfilePage = () => (
+  <Container>
+    <Layout>
+      <Typography variant="h1">Profile Page</Typography>
+    </Layout>
+  </Container>
+);
 
 export default ProfilePage;

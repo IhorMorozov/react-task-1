@@ -1,8 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './Search.module.scss';
 
 const Search = (props) => {
-  // eslint-disable-next-line react/prop-types
   const { query, setQuery } = props;
 
   return (
@@ -14,6 +14,11 @@ const Search = (props) => {
       onChange={(event) => setQuery(event.target.value)}
     />
   );
+};
+
+Search.propTypes = {
+  query: PropTypes.string.isRequired,
+  setQuery: PropTypes.instanceOf(Object).isRequired,
 };
 
 export default Search;

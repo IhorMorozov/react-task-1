@@ -1,23 +1,13 @@
 import React, { useMemo, useState } from 'react';
-import { Button, Container, Paper } from '@mui/material';
-import { makeStyles } from '@mui/styles';
+import { Button, Container } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import UserTable from '../../components/UserTable/UserTable';
 import { createUser, getAllUsers, updateUser } from '../../store/asyncActions/manageCreatedUsers';
-import Modal from '../../components/Modal/Modal';
 import CustomSnackbar from '../../components/Snackbar/Snackbar';
 import { setSearchedUsersAction, setUserAction } from '../../store/reducers/usersReducer';
 import Search from '../../components/Search/Search';
-
-const useStyle = makeStyles(() => ({
-  wrapper: {
-    margin: '8rem 0 3rem',
-    padding: '2rem',
-  },
-  text: {
-    padding: '1rem',
-  },
-}));
+import UserForm from '../../components/UserForm/UserForm';
+import Layout from '../../components/Layout/Layout';
 
 const UsersPage = () => {
   const users = useSelector((state) => state.usersReducer.users);
@@ -62,15 +52,14 @@ const UsersPage = () => {
     setOpenSnackbar(true);
   };
 
-  const classes = useStyle();
   return (
     <Container>
-      <Paper elevation={24} className={classes.wrapper}>
+      <Layout>
         <Button variant="outlined" onClick={() => handleOpenModal('Create')}>
           Create
         </Button>
         <Search query={query} setQuery={setQuery} />
-        <Modal
+        <UserForm
           open={openModal}
           handleClose={handleCloseModal}
           handleSave={handleSave}
@@ -86,8 +75,8 @@ const UsersPage = () => {
               setOpenSnackbar={setOpenSnackbar}
             />
           )
-          : <h4 className={classes.text}>No users...</h4>}
-      </Paper>
+          : <h4 style={{ padding: '1rem' }}>No users...</h4>}
+      </Layout>
     </Container>
   );
 };
