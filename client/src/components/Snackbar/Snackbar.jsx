@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const CustomSnackbar = (props) => {
   const { open, setOpen, action } = props;
-  const message = `User was successfully ${action.toLowerCase()}d`;
+  const message = `User was ${action.toLowerCase()}d successfully `;
   return (
     <div>
       <Snackbar

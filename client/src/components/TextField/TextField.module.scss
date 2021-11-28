@@ -1,0 +1,21 @@
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.textField {
+  height: 3rem;
+  width: 20rem;
+  padding: 1rem;
+  margin: 0.5rem 0;
+}
+
+.invalid {
+  border-color: red;
+}
+
+.error {
+  color: red;
+  font-size: .6rem;
+}
+

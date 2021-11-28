@@ -1,0 +1,16 @@
+
+.button {
+  border: none;
+  margin: 0;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  color: #1976D2;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  &:hover {
+    background-color: #cdf0fc;
+  }
+}

@@ -25,7 +25,7 @@ const UserTable = (props) => {
             handleOpenModal={handleOpenModal}
             setOpenSnackbar={setOpenSnackbar}
           />
-        )) : <h4 style={{ padding: '1rem' }}>No available users...</h4>}
+        )) : <tr style={{ padding: '1rem' }}><td>No available users...</td></tr>}
       </tbody>
     </table>
   );

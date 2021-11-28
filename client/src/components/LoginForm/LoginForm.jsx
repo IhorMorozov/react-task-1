@@ -23,10 +23,8 @@ const LoginForm = () => {
     setUser({ ...user, [`${id}`]: value });
   };
   const title = 'Log in';
-  const inputOptions = [{
-    id: 'login', type: 'login', handler: inputHandler,
-  },
-  { id: 'password', type: 'password', handler: inputHandler },
+  const inputOptions = [{ id: 'login', type: 'login', handler: inputHandler },
+    { id: 'password', type: 'password', handler: inputHandler },
   ];
   const buttonOptions = [{ name: 'Log In', handler: logInHandler }];
   return (

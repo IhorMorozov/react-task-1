@@ -24,6 +24,7 @@ class CreatedUserService {
     if (!user._id) {
       throw new Error('Id is not available');
     }
+    // eslint-disable-next-line no-underscore-dangle
     const updatedUser = await CreatedUser.findByIdAndUpdate(user._id, user, { new: true });
     return updatedUser;
   }

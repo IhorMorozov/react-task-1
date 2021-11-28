@@ -12,6 +12,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.24.0",
+    "classnames": "^2.3.1",
     "eslint-config-airbnb": "^18.2.1",
     "formik": "^2.2.9",
     "prettier": "^2.4.1",
