@@ -1,4 +1,3 @@
-// const CreatedUser = require('../models/CreatedUser');
 const CreatedUserService = require('../services/CreatedUserService');
 
 class CreatedUserController {

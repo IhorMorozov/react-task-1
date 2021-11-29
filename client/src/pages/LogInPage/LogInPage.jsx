@@ -1,12 +1,12 @@
 import React from 'react';
 import { Container } from '@mui/material';
 import Layout from '../../components/Layout/Layout';
-import LoginForm from '../../components/LoginForm/LoginForm';
+import AuthForm from '../../components/AuthForm/AuthForm';
 
 const LogInPage = () => (
   <Container maxWidth="sm">
     <Layout>
-      <LoginForm />
+      <AuthForm type="login" name="Log In" />
     </Layout>
   </Container>
 );

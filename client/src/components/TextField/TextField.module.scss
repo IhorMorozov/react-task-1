@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
 }
-
 .textField {
   height: 3rem;
   width: 100%;
@@ -10,11 +9,9 @@
   margin: 0.5rem 0;
   min-width: 20rem;
 }
-
 .invalid {
   border-color: red;
 }
-
 .error {
   color: red;
   font-size: .6rem;

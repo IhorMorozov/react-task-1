@@ -3,7 +3,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import { IconButton } from '@mui/material';
 import PropTypes from 'prop-types';
-import { deleteUser } from '../../store/asyncActions/manageCreatedUsers';
+import { deleteUser } from '../../store/asyncActions/crudUsers';
 import { setCurrentIdAction, setUserAction } from '../../store/reducers/usersReducer';
 
 const UserItem = (props) => {

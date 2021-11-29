@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './Button.module.scss';
 
 const Button = (props) => {
@@ -10,6 +11,14 @@ const Button = (props) => {
       {children}
     </button>
   );
+};
+
+Button.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
+  type: PropTypes.string.isRequired,
 };
 
 export default Button;

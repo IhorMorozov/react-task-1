@@ -2,7 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { Button, Container } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import UserTable from '../../components/UserTable/UserTable';
-import { createUser, getAllUsers, updateUser } from '../../store/asyncActions/manageCreatedUsers';
+import { createUser, getAllUsers, updateUser } from '../../store/asyncActions/crudUsers';
 import CustomSnackbar from '../../components/Snackbar/Snackbar';
 import { setSearchedUsersAction, setUserAction } from '../../store/reducers/usersReducer';
 import Search from '../../components/Search/Search';

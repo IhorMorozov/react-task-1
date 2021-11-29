@@ -1,12 +1,12 @@
 import React from 'react';
 import { Container } from '@mui/material';
 import Layout from '../../components/Layout/Layout';
-import RegistrationForm from '../../components/RegistrationForm/RegistrationForm';
+import AuthForm from '../../components/AuthForm/AuthForm';
 
 const RegistrationPage = () => (
   <Container maxWidth="sm">
     <Layout>
-      <RegistrationForm />
+      <AuthForm type="registration" name="Register" />
     </Layout>
   </Container>
 );

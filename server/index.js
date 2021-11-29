@@ -3,9 +3,8 @@ const mongoose = require('mongoose');
 const authRouter = require('./routes/authRouter');
 const createdUserRouter = require('./routes/createdUserRouter');
 const corsMiddleware = require('./middleware/cors.middleware');
+const { DB_URL, PORT } = require('./config/config');
 
-const PORT = 5000;
-const DB_URL = 'mongodb+srv://user:user@clusterforapps.wxs1c.mongodb.net/react-task-1?retryWrites=true&w=majority';
 const app = express();
 
 app.use(express.json());

@@ -15,7 +15,6 @@ class AuthController {
   // eslint-disable-next-line consistent-return,class-methods-use-this
   async registration(req, res) {
     try {
-      console.log(req.body);
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
         return res.status(400).json({ message: 'Error', errors });
@@ -40,7 +39,6 @@ class AuthController {
     try {
       const { username, password } = req.body;
       const user = await User.findOne({ username });
-      console.log(user);
       if (!user) {
         return res.status(400).json({ message: 'User is not found' });
       }
@@ -48,12 +46,10 @@ class AuthController {
       if (!isPassValid) {
         return res.status(400).json({ message: 'Password isn\'t correct' });
       }
-      // eslint-disable-next-line no-underscore-dangle
       const token = await generateAccessToken(user._id);
       return res.json({
         token,
         user: {
-          // eslint-disable-next-line no-underscore-dangle
           id: user._id,
           email: user.email,
         },
@@ -68,12 +64,10 @@ class AuthController {
   async getUser(req, res) {
     try {
       const user = await User.findOne({ _id: req.user.id });
-      // eslint-disable-next-line no-underscore-dangle
       const token = await generateAccessToken(user._id);
       return res.json({
         token,
         user: {
-          // eslint-disable-next-line no-underscore-dangle
           id: user._id,
           email: user.email,
         },

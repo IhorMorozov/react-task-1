@@ -7,6 +7,7 @@ export const registration = async (email, password) => {
     const response = await axios.post('http://localhost:5000/auth/registration', {
       username: email, password,
     });
+
     console.log(response.data.message);
   } catch (e) {
     console.log(e.response.data.message);

@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken');
 const { secret } = require('../config/config');
 
+// eslint-disable-next-line consistent-return
 module.exports = (req, res, next) => {
   if (req.method === 'OPTIONS') {
     return next();
