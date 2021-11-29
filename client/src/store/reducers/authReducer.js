@@ -1,19 +1,30 @@
 const defaultState = {
-  isAuth: localStorage.getItem('isAuth') || false,
+  currentUser: {},
+  isAuth: false,
 };
 
-const SET_IS_AUTH = 'SET_IS_AUTH';
+const SET_USER = 'SET_USER';
+const LOG_OUT = 'LOG_OUT';
 
 export const authReducer = (state = defaultState, action) => {
   switch (action.type) {
-    case SET_IS_AUTH:
+    case SET_USER:
       return {
         ...state,
-        isAuth: action.payload,
+        currentUser: action.payload,
+        isAuth: true,
+      };
+    case LOG_OUT:
+      localStorage.removeItem('token');
+      return {
+        ...state,
+        currentUser: {},
+        isAuth: false,
       };
     default:
       return state;
   }
 };
 
-export const setIsAuthAction = (payload) => ({ type: SET_IS_AUTH, payload });
+export const setUser = (payload) => ({ type: SET_USER, payload });
+export const logOut = () => ({ type: LOG_OUT });

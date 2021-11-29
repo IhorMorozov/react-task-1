@@ -6,7 +6,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { makeStyles } from '@mui/styles';
 import { useDispatch, useSelector } from 'react-redux';
 import { privateRoutes } from '../../router/routes';
-import { setIsAuthAction } from '../../store/reducers/authReducer';
+import { logOut } from '../../store/reducers/authReducer';
 
 const useStyle = makeStyles(() => ({
   navLink: {
@@ -26,8 +26,7 @@ const Navbar = () => {
   const classes = useStyle();
   const dispatch = useDispatch();
   const logOutHandler = () => {
-    dispatch(setIsAuthAction(false));
-    localStorage.setItem('isAuth', '');
+    dispatch(logOut());
   };
   return (
     <AppBar position="fixed" style={{ backgroundColor: 'black' }}>

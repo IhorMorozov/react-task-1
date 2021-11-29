@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 const useStyle = makeStyles(() => ({
   wrapper: {
     margin: '8rem 0 3rem',
-    padding: '4rem',
+    padding: '3rem',
   },
 }));
 
