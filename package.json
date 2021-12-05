@@ -1,0 +1,25 @@
+{
+  "name": "react-task-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "cd server && yarn start",
+    "client": "cd client && yarn start",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IhorMorozov/react-task-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IhorMorozov/react-task-1/issues"
+  },
+  "homepage": "https://github.com/IhorMorozov/react-task-1#readme",
+  "devDependencies": {
+    "concurrently": "^6.4.0"
+  }
+}

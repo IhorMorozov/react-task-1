@@ -14,11 +14,9 @@ const UserItem = (props) => {
   userValues.length -= 1;
   const handleEdit = () => {
     handleOpenModal('Update');
-    // eslint-disable-next-line no-underscore-dangle
     dispatch(setCurrentIdAction(user._id));
   };
   const handleDelete = () => {
-    // eslint-disable-next-line no-underscore-dangle
     dispatch(deleteUser(user._id));
     dispatch(setUserAction('Delete'));
     setOpenSnackbar(true);

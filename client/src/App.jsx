@@ -10,8 +10,11 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(auth());
+    if (localStorage.getItem('token')) {
+      dispatch(auth());
+    }
   }, []);
+
   return (
     <BrowserRouter>
       <Navbar />

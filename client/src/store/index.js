@@ -9,7 +9,6 @@ const rootReducer = combineReducers({
   usersReducer,
 });
 
-// eslint-disable-next-line import/prefer-default-export
 export const store = createStore(
   rootReducer,
   composeWithDevTools(applyMiddleware(thunk)),

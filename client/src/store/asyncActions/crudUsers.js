@@ -1,23 +1,23 @@
 import axios from 'axios';
-import { getAllAction } from '../reducers/usersReducer';
+import { setAllUsersAction } from '../reducers/usersReducer';
 
-// eslint-disable-next-line import/prefer-default-export
-export const createUser = (user) => async () => {
-  const response = await axios.post('http://localhost:5000/api/users', user);
-  return response.data;
-};
-// eslint-disable-next-line import/prefer-default-export
 export const getAllUsers = () => async (dispatch) => {
   const response = await axios.get('http://localhost:5000/api/users');
-  dispatch(getAllAction(response.data));
-};
-// eslint-disable-next-line import/prefer-default-export
-export const updateUser = (user) => async () => {
-  const response = await axios.put('http://localhost:5000/api/users', user);
+  dispatch(setAllUsersAction(response.data));
   return response.data;
 };
-// eslint-disable-next-line import/prefer-default-export
-export const deleteUser = (id) => async () => {
+export const createUser = (user) => async (dispatch) => {
+  const response = await axios.post('http://localhost:5000/api/users', user);
+  dispatch(getAllUsers());
+  return response.data;
+};
+export const updateUser = (user) => async (dispatch) => {
+  const response = await axios.put('http://localhost:5000/api/users', user);
+  dispatch(getAllUsers());
+  return response.data;
+};
+export const deleteUser = (id) => async (dispatch) => {
   const response = await axios.delete(`http://localhost:5000/api/users/${id}`);
+  dispatch(getAllUsers());
   return response.data;
 };

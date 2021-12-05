@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Button, Container } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import UserTable from '../../components/UserTable/UserTable';
@@ -21,19 +21,16 @@ const UsersPage = () => {
   const [openSnackbar, setOpenSnackbar] = useState(false);
   const [query, setQuery] = useState('');
 
-  useMemo(() => {
+  useEffect(() => {
     dispatch(getAllUsers());
-    if (query.length === 0) {
-      dispatch(setSearchedUsersAction(users));
-    }
-  }, [users]);
+  }, []);
 
   useMemo(() => {
     dispatch(setSearchedUsersAction(users.filter((user) => {
       const values = Object.values(user).join('');
       return values.toLowerCase().includes(query.toLowerCase());
     })));
-  }, [query]);
+  }, [query, users]);
 
   const handleOpenModal = (a) => {
     setOpenModal(true);
@@ -66,7 +63,7 @@ const UsersPage = () => {
           action={action}
         />
         <CustomSnackbar open={openSnackbar} setOpen={setOpenSnackbar} action={action} />
-        {users.length > 0
+        {users.length
           ? (
             <UserTable
               users={searchedUsers}
