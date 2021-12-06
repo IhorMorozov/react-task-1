@@ -71,6 +71,7 @@ class AuthController {
       });
     } catch (e) {
       console.log(e);
+      res.status(401).json({ message: 'Auth error' });
     }
   }
 }

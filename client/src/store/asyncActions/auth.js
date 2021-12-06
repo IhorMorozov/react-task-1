@@ -35,6 +35,6 @@ export const auth = () => async (dispatch) => {
     return response.data.message;
   } catch (e) {
     localStorage.removeItem('token');
-    return e.data.message;
+    return e.data;
   }
 };

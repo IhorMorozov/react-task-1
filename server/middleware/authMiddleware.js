@@ -7,7 +7,7 @@ module.exports = (req, res, next) => {
   }
   try {
     const token = req.headers.authorization.split(' ')[1];
-    if (!token) {
+    if (token === 'null') {
       return res.status(401).json({ message: 'User isn\'t auth' });
     }
     const decodedData = jwt.verify(token, secret);
